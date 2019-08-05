@@ -208,8 +208,8 @@
                 $.post("/api/friends", newPawFriend, function (data) {
                     console.log(data);
 
-                    $("#pawFriend").text(data.name);
-                    $("#pawFriendPic").attr("src", data.photo);
+                    $("#pawFriend").text(newPawFriend.name);
+                    $("#pawFriendPic").attr("src", newPawFriend.photo);
                 });
 
             } else {

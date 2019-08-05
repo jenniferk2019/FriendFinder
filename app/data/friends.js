@@ -1,7 +1,7 @@
 var pawFriends = [
 	{
-		name: "Goldendoodle",
-		photo: "https://thehappypuppysite.com/wp-content/uploads/2018/06/goldendoodle.jpg",
+		name: "Golden Retriever",
+		photo: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s90d1e24eaef94739/image/i113c437f7458a220/version/1562753304/image.jpg",
         scores: [
             1, 
             1, 
@@ -18,7 +18,7 @@ var pawFriends = [
     
 	{
 		name: "Shiba-Inu",
-		photo: "https://japaninsides.com/wp-content/uploads/2017/11/cute-dog-shiba-inu-ryuji-japan-28.jpg",
+		photo: "http://blog-imgs-31.fc2.com/c/a/r/carbuncle/492.jpg",
         scores: [
             1, 
             2, 
@@ -35,7 +35,7 @@ var pawFriends = [
     
 	{
 		name: "French-Bulldog",
-		photo: "http://www.frenchbulldogbreed.net/wp-content/uploads/2018/06/The-magnificent-appeal-of-rare-Blue-French-Bulldogs-01.jpg",
+		photo: "https://p.rdcpix.com/v01/gebbf0600-c0od-w1200_h400_q100.jpg",
 		scores: [
             4, 
             4, 
@@ -52,7 +52,7 @@ var pawFriends = [
     
 	{
 		name: "Mutt",
-		photo: "https://pbs.twimg.com/profile_images/748677687284236289/14nr-AV4.jpg",
+		photo: "https://www.thegooddogguide.com/images/listingimages/20160415-122934-5516.png",
 		scores: [
             5, 
             4, 
@@ -68,8 +68,8 @@ var pawFriends = [
     },
     
 	{
-		name: "Snoopy",
-		photo: "http://www.geekcals.com/wp-content/uploads/2015/09/Dancing-Snoopy.jpg",
+		name: "Cavalier",
+		photo: "https://vippuppies.com/wp-content/uploads/2019/05/Annagraber01@gmail.com-1-9911.jpg",
 		scores: [
             1, 
             2, 
