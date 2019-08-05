@@ -9,8 +9,7 @@ The user takes the survey and results are compiled to generate the best dog bree
 Access:
 
 The application can be accessed via its deployed link on Heroku. 
-
-Link:
+Link: https://tranquil-ridge-14186.herokuapp.com/
 
 Technology Used:
 - HTML
