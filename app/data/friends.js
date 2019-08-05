@@ -17,8 +17,8 @@ var pawFriends = [
     },
     
 	{
-		name: "Shiba-Inu",
-		photo: "http://blog-imgs-31.fc2.com/c/a/r/carbuncle/492.jpg",
+		name: "Border Collie",
+		photo: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s9b84eb5442f3eb5a/image/i95c134e2a9087a13/version/1499618459/image.jpg",
         scores: [
             1, 
             2, 
