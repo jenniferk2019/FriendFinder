@@ -142,7 +142,7 @@
 
 
         <!--Results/Modal-->
-        <div id="bestFriendModal" class="modal fade" role="dialog">
+        <div id="pawFriendModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -151,7 +151,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="pawFriend"></h2>
-                        <img id="pawFriendPic" src="#" class="img-fluid" alt="image">
+                        <img id="pawFriendPic" src="#" class="img-fluid" alt="image" style="max-width: 100%; height: auto;">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
@@ -208,8 +208,9 @@
                 $.post("/api/friends", newPawFriend, function (data) {
                     console.log(data);
 
-                    $("#pawFriend").text(newPawFriend.name);
-                    $("#pawFriendPic").attr("src", newPawFriend.photo);
+                    $("#pawFriend").text(data.name);
+                    $("#pawFriendPic").attr("src", data.photo);
+                    $("#pawFriendModal").modal("toggle");
                 });
 
             } else {
