@@ -135,10 +135,11 @@
                     <option value="5">5</option>
                 </select>
             </div>
+            <div class="text-center">
+                <button id="submitBtn" type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#bestFriendModal">Submit</button>
+            </div>
         </form>
-        <div class="text-center">
-            <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
-        </div>
+
 
         <!--Results/Modal-->
         <div id="bestFriendModal" class="modal fade" role="dialog">
@@ -150,7 +151,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="pawFriend"></h2>
-                        <img id="pawFriendPic" src="#">
+                        <img id="pawFriendPic" src="#" class="img-fluid" alt="image">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
@@ -162,14 +163,17 @@
 
     <footer class="footer">
         <div class="container">
-            <p><a href="/api/friends">API PawFriends</a> | <a
-                    href="https://github.com/jenniferk2019/FriendFinder">GitHub Repo</a></p>
+            <p><a href="https://github.com/jenniferk2019/FriendFinder">GitHub Repo</a></p>
         </div>
     </footer>
 
     <script type="text/javascript">
-        $("#submit").on("click", function (event) {
+        $("#submitBtn").on("click", function (event) {
             event.preventDefault();
+
+            // $('#bestFriendModal').on('shown.bs.modal', function () {
+            //     $('#myInput').trigger('focus')
+            // })
 
             //functions to validate answers of survey
 
@@ -205,7 +209,7 @@
 
                 //calling ajax
 
-                $.post("/api/friends", newPawFriend, function(data) {
+                $.post("/api/friends", newPawFriend, function (data) {
                     console.log(data);
 
                     $("#pawFriend").text(data.name);
@@ -219,4 +223,4 @@
         });
 
     </script>
-    </body>
+</body>
