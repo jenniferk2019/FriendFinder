@@ -1,0 +1,57 @@
+body{
+    background-image: url("../app/data/images/sage_green_seamless_paw_prints_wallpaper.gif");
+    background-repeat: inherit;
+    background-size: auto;
+}
+
+.home{
+    font-size: larger;
+    text-decoration: none;
+}
+
+.home:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.jumbotron{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url(../app/data/images/Purple-Paw-Pattern.jpg);
+}
+
+.btn{
+    background-color: lightcoral;
+    color: lawngreen;
+    border: none;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+#submitBtn:hover{
+    background-color: lawngreen;
+    color: lightcoral;
+}
+
+.btn:hover{
+    background-color: lawngreen;
+    color: lightcoral;
+}
+
+a{
+    color: black;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+h1{
+    color: black;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+h3{
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+form{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: medium;
+}
