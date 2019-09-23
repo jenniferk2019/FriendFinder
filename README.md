@@ -17,4 +17,4 @@ NPM Packages:
 - Path
 
 
-Deployed Link: https://tranquil-ridge-14186.herokuapp.com/
+Deployed Link: https://paw-finder-app.herokuapp.com/
