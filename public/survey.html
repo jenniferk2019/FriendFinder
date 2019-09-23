@@ -3,23 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>🐾&nbsp;PawFinder</title>
-    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <title>🐾PawFinder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container content">
-        <h1><a class="home" href="home.html">🐾&nbsp;Paw Survey</a></h1>
-        <h3>Answer these questions to find your paw-match!<br />
-            Select one answer for each question from 1 (lowest agreeable) to 5 (most agreeable).</h3>
-        <br />
+        <h1>🐾Paw Survey</h1>
+        <p>Answer these questions to find your paw-match!</p>
+        <p>Select one answer for each question from 1 (lowest agreeable) to 5 (most agreeable).</p>
+
         <form>
             <div class="form-group">
                 <input id="name" type="text" class="form-control" placeholder="Name Required">
@@ -138,8 +136,7 @@
                 </select>
             </div>
             <div class="text-center">
-                <button id="submitBtn" type="submit" class="btn btn-success btn-lg" data-toggle="modal"
-                    data-target="#bestFriendModal">Submit</button>
+                <button id="submitBtn" type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#bestFriendModal">Submit</button>
             </div>
         </form>
 
@@ -154,8 +151,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="pawFriend"></h2>
-                        <img id="pawFriendPic" src="#" class="img-fluid" alt="image"
-                            style="max-width: 100%; height: auto;">
+                        <img id="pawFriendPic" src="#" class="img-fluid" alt="image" style="max-width: 100%; height: auto;">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
@@ -166,32 +162,25 @@
     </div>
 
     <footer class="footer">
-            <div class="container">
-                    <p><a href="https://github.com/jenniferk2019/FriendFinder">GitHub Repo</a>
-                    <br/>&copy; Jennifer Kwon 2019</p>
-                  </div>
+        <div class="container">
+            <p><a href="https://github.com/jenniferk2019/FriendFinder">GitHub Repo</a></p>
+        </div>
     </footer>
 
     <script type="text/javascript">
         $("#submitBtn").on("click", function (event) {
             event.preventDefault();
-
             //functions to validate answers of survey
-
             var valid = true;
-
             if ($("#name").val() === "" || $("#photo").val() === "") {
                 valid = false;
-
             } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
                 valid = false;
             }
-
             if (valid === true) {
                 var newPawFriend = {
                     name: $("#name").val().trim(),
                     photo: $("#photo").val().trim(),
-
                     scores: [
                         $("#question1").val(),
                         $("#question2").val(),
@@ -205,24 +194,18 @@
                         $("#question10").val()
                     ]
                 };
-
                 var currentURL = window.location.origin;
-
                 //calling ajax
-
                 $.post("/api/friends", newPawFriend, function (data) {
                     console.log(data);
-
                     $("#pawFriend").text(data.name);
                     $("#pawFriendPic").attr("src", data.photo);
                     $("#pawFriendModal").modal("toggle");
                 });
-
             } else {
                 //for incomplete required fields
                 alert("Incomplete!");
             }
         });
-
     </script>
 </body>
