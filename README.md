@@ -16,9 +16,5 @@ NPM Packages:
 - Express
 - Path
 
-Author: JENNIFER KWON
 
-Access:
-
-The application can be accessed via its deployed link on Heroku. 
-Link: https://tranquil-ridge-14186.herokuapp.com/
+Deployed Link: https://tranquil-ridge-14186.herokuapp.com/
